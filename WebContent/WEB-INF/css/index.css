@@ -1,0 +1,568 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.chatPage {
+	width: 800px;
+	height: 600px;
+	background: #fff;
+	margin: 0 auto;
+	vertical-align: middle;
+	outline: none;
+	position: relative;
+	top: 70px;
+	border-radius: 4px;
+	box-shadow: 0px 3px 7px #CFCFCF, 3px 0px 7px #CFCFCF, 0px -3px 7px #CFCFCF, -3px 0px 7px #CFCFCF;
+}
+
+.banner {
+	width: 800px;
+	height: 55px;
+	background: url(../img/banenr-logo.png);
+	border-radius: 4px 4px 0 0;
+}
+
+.headImage {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	float: left;
+	border-radius: 50%;
+	border: solid 1px #CFCFCF;
+	background: url(../img/touxiang.jpg) no-repeat;
+	background-size: cover;
+	position: relative;
+	top: 8px;
+	left: 13px;
+}
+
+.headImage:hover {
+	border: solid 1px #fff;
+}
+
+.headList {
+	position: absolute;
+	background-color: #fff;
+	width: 182px;
+	height: 430px;
+	top: 55px;
+	left: 0px;
+	display: none;
+	z-index: 10;
+}
+
+.ulList {
+	list-style: none;
+	position: relative;
+	left: -15px;
+	color: #000;
+}
+
+li:hover {
+	background: #CFCFCF;
+}
+
+.headName {
+	position: relative;
+	left: 13px;
+	top: 10px;
+}
+
+.myName {
+	font-size: 20px;
+	color: #000;
+}
+
+.jianjie {
+	position: relative;
+	top: -10px;
+	font-size: 13px;
+}
+
+.search {
+	float: left;
+	margin: 17px 0px 0 53px;
+}
+
+#kuang {
+	color: #CFCFCF;
+	border-radius: 20px;
+	border: solid 1px #CFCFCF;
+}
+
+#kuang:hover {
+	color: #fff;
+	border: solid 1px #fff;
+}
+
+#searchBox {
+	width: 50%;
+	background: none;
+	border: none;
+	position: relative;
+}
+
+.toSearch {
+	position: relative;
+	top: -3px;
+	left: 3px;
+}
+
+.changeTop {
+	float: left;
+	display: inline-block;
+	color: #CFCFCF;
+	margin: 10px 20px;
+}
+
+.chat,
+.friends,
+.files {
+	display: inline-block;
+	margin: 10px 0 0 40px;
+	transition: color 0.5s;
+}
+
+.topRight {
+	margin-right: 6px;
+}
+
+.toprightico {
+	float: right;
+	margin: 4px;
+	margin-top: 20px;
+	color: #CFCFCF;
+	border-radius: 4px;
+	transition: background 0.5s, color 0.5s;
+}
+
+.toprightico:hover,
+.chat:hover,
+.friends:hover,
+.files:hover {
+	color: white;
+}
+
+.max {
+	width: 13px;
+	height: 13px;
+	border: 1px solid #cfcfcf;
+	position: relative;
+	top: 2px;
+	left: 2px;
+	transition: border 1s;
+}
+
+.max:hover {
+	border: 1px solid #fff;
+}
+
+.close:hover {
+	background: red;
+}
+
+.chatBody {}
+
+.chatLeft {
+	display: inline-block;
+	width: 200px;
+	height: 545px;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	background-color: #fafafa;
+	float: left;
+	overflow: hidden;
+}
+/*左侧滚动条样式*/
+.chatLeft::-webkit-scrollbar  
+{  
+    width: 8px;  
+}
+.chatLeft::-webkit-scrollbar-thumb{
+	width: 8px;
+	background: #CCCCCC;
+	border-radius: 4px;
+}
+
+.friendOne,.friendTwo{
+	display: block;
+	width: 200px;
+	height: 55px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	/*background: #ebebec;*/
+}
+
+
+.friendImg{
+	width: 40px;
+	height: 40px;
+	margin: 0 0 0 12px;
+	padding:0;
+	position: relative;
+	display: inline-block;
+	bottom:22px;
+	border-radius: 50%;
+	
+}
+
+
+
+.friendInfor {
+	display: inline-block;
+	width: 135px;
+	height: 55px;
+	margin-left: 8px;
+	text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+}
+.friendInforCon{
+	display: inline-block;
+	width: 110px;
+	height: 55px;
+	text-align: left;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+.friendInforNum{
+	display: inline-block;
+	width: 20px;
+	height: 55px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+}
+.name {
+	font-size: 17px;
+	position: relative;
+	color: #000000;
+	top: 5px;
+}
+.message,.messageNum {
+	position: relative;
+	font-size: 13px;
+	color: darkgray;
+	
+}
+.message {
+	width:98px;
+	height:20px;
+	position: relative;
+	font-size: 13px;
+	color: darkgray;
+	top: -18px;
+	display:inline-block;
+	text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+}
+.messageNum{
+	margin: 26px 0;
+	width: 15px;
+	height: 15px;
+	text-align: right;
+	border-radius: 50%;
+	background: red;
+}
+.messageNumCon{
+	position: relative;
+	bottom: 3px;
+	right: 4px;
+	color: #fff;
+}
+
+.entry-trangle {
+	position: absolute;
+	margin: 0 auto;
+	left: 135px;
+	top: -10px;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #fff;
+	z-index: 2;
+}
+
+.bgChat {
+	width: 600px;
+	height: 545px;
+	position: relative;
+	display: inline-block;
+	line-height: 545px;
+	
+	text-align: center;
+	float: right;
+}
+.bgChat>img{
+	margin-top: 220px;
+}
+
+.chatMain {
+	width: 600px;
+	height: 545px;
+	position: relative;
+	display: none;
+	float: right;
+}
+
+.chatTop {
+	width: 600px;
+	height: 36px;
+	position: relative;
+	border-bottom: 1px solid #CFCFCF;
+}
+
+.friendName {
+	font-size: 20px;
+	color: #000;
+	position: absolute;
+	left: 8px;
+	top: 2px;
+
+}
+
+.chatTopRight {
+	float: right;
+	width: 135px;
+	height: 35px;
+
+}
+
+.chatTopIcon {
+	margin-right: 8px;
+	transition: background-color 0.5s;
+	border-radius: 3px;
+}
+
+.chatTopIcon:hover {
+	background-color: #CFCFCF;
+}
+
+.messageBody {
+	width: 600px;
+	height: 350px;
+	position: relative;
+	overflow:auto;
+	overflow-x: hidden;
+	border-bottom: 1px solid #CFCFCF;
+}
+.messageBody::-webkit-scrollbar{
+	width: 10px;
+	border-radius: 5px;
+}
+.messageBody::-webkit-scrollbar-thumb{
+	
+	border-radius: 5px;
+	background: #CFCFCF;
+}
+.messageBody::-webkit-scrollbar-track {/*滚动条里面轨道*/
+            border-radius: 0;
+            background: none;
+        }
+.messageBody::-webkit-scrollbar-button{
+	
+	display: none;
+}
+.chatTime{
+	width: 100%;
+	margin: 5px 0;
+	text-align: center;
+}
+.chatMessage{
+	width: 600px;
+	margin: 8px 0 5px 0;
+	position: relative;
+}
+.friendOneRight{
+	width: 40px;
+	height: 40px;
+	margin: 0;
+	display: inline-block;
+	vertical-align: top;
+	border-radius: 50%;
+	background: url(../img/ceshi-1.jpg) no-repeat;
+	background-size: cover;
+	position: relative;
+	left: 8px;
+}
+.chatMessageMain{
+	position: relative;
+	display: inline-block;
+	top: 0px;
+}
+.memberName{
+	display: block;
+	margin-left: 20px;
+	font-size: 0.9rem;
+}
+.myMemberName{
+	display: block;
+	margin-left: 20px;
+	font-size: 0.9rem;
+	right: -3px;
+	position: relative;
+}
+.groupFriendQipao{
+	max-width: 400px;
+	display: inline-block;
+	border-radius: 15px;
+	background: #FFFF00;
+	position: relative;
+	margin-left: 20px;
+	top: 0px;
+}
+.friendQipao{
+	max-width: 400px;
+	display: inline-block;
+	border-radius: 15px;
+	background: #FFFF00;
+	position: relative;
+	margin-left: 20px;
+	top: 5px;
+}
+.friendQipaoCon{
+	padding: 5px;
+}
+.friendMessageCon{
+	
+}
+.myMessage{
+	width: 600px;
+	text-align:right;
+	margin: 8px 6px 5px 0;
+}
+.myImageRight{
+	margin:0 14px 0 16px;
+
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	vertical-align: top;
+	border-radius: 50%;
+	background: url(../img/touxiang.jpg) no-repeat;
+	background-size: cover;
+}
+.myQipao{
+	max-width: 400px;
+	display: inline-block;
+	border-radius: 15px;
+	background: #FFFF00;
+	position: relative;
+	right:-4px;
+}
+.myQipaoCon{
+    padding: 5px;
+    position: relative;
+    text-align:left;
+}
+.mySanjiao{
+	margin: 0;
+	padding: 0;
+	width: 0px;
+	position: absolute;
+	top: 6px;
+	right: 8px;
+}
+
+.chatBox {
+	width: 600px;
+	height: 80px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	top: 0px;
+	display: inline-block;
+}
+
+.chatBoxTop {
+	margin: 0;
+	margin-left: 5px;
+	padding: 0;
+	position: relative;
+	float: left;
+	display: inline;
+	color: gray;
+	font-size: 20px;
+	margin-top: 3px;
+}
+
+.chatBoxIcon {
+	margin-left: 8px;
+	border-radius: 3px;
+}
+
+.chatBoxIcon:hover {
+	background-color: #CFCFCF;
+}
+
+.historyMessage {
+	float: left;
+	display: inline;
+	position: relative;
+	left: 250px;
+	font-size: 11px;
+	line-height: 40px;
+	color: #767676;
+	cursor: pointer;
+}
+
+.sanjiao {
+	margin: 0;
+	padding: 0;
+	width: 0px;
+	position: relative;
+	left: -10px;
+}
+
+.inputChat {
+	margin: 0;
+	border: none;
+	outline: none;
+	padding: 0 8px;
+	font-size: 13.5px;
+	resize: none;
+	width: 584px;
+	height: 80px;
+	overflow-y: hidden;
+	background: #fff;
+	font-family: 微软雅黑;
+	font: 400 13.3333px Arial;
+	/*-webkit-appearance: textarea;
+    -webkit-rtl-ordering: logical;
+    flex-direction: column;
+    cursor: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    -webkit-writing-mode: horizontal-tb;*/
+}
+
+.sendButton {
+	width: 70px;
+	position: absolute;
+	right: 10px;
+	top: 120px;
+	border: none;
+	background-color: #0188fb;
+	color: #fff;
+	padding: 3px 4px;
+	border-radius: 3px;
+	font-family: 微软雅黑;
+}
+
+.sendButton:hover {
+	background-color: #63B8FF;
+}

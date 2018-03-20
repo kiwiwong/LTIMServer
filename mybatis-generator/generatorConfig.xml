@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <context id="context1">
+    <jdbcConnection connectionURL="jdbc:mysql://localhost:3306/TIM?characterEncoding=utf-8" driverClass="com.mysql.jdbc.Driver" password="d514" userId="root" />
+    <javaModelGenerator targetPackage="com.test.mybatis.po" targetProject="LTIMServer" />
+    <sqlMapGenerator targetPackage="com.test.mybatis.mapper" targetProject="LTIMServer" />
+    <javaClientGenerator targetPackage="com.test.mybatis.mapper" targetProject="LTIMServer" type="XMLMAPPER" />
+    <table schema="TIM" tableName="%">
+    </table>
+  </context>
+</generatorConfiguration>

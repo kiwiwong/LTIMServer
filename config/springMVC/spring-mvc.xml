@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<!-- 配置注解驱动 -->
+	<mvc:annotation-driven />
+
+	<!-- 配置包扫描器 -->
+	<context:component-scan base-package="com.test.controller"></context:component-scan>
+
+	<!-- 视图解析器 -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	
+	<!-- 对静态资源文件请求的映射，否则客户端无法得到js文件和css文件 -->
+	<!-- 将/js/**的所有请求链接映射到/WEB-INF/js/目录下，即在/WEB-INF/js/目录 -->
+	<!-- 下查找请求的js文件和css文件 -->
+
+	<mvc:resources location="/WEB-INF/css/" mapping="/css/**"></mvc:resources>
+	<mvc:resources location="/WEB-INF/js/" mapping="/js/**"></mvc:resources>		
+	<mvc:resources location="/WEB-INF/scripts/" mapping="/scripts/**"></mvc:resources>
+	
+	<mvc:resources location="/WEB-INF/dist/" mapping="/dist/**"></mvc:resources>
+	<mvc:resources location="/WEB-INF/fonts/" mapping="/fonts/**"></mvc:resources>		
+	<mvc:resources location="/WEB-INF/html/" mapping="/html/**"></mvc:resources>
+	
+	<mvc:resources location="/WEB-INF/img/" mapping="/img/**"></mvc:resources>
+	<mvc:resources location="/WEB-INF/src/" mapping="/src/**"></mvc:resources>
+	<mvc:resources location="/WEB-INF/music/" mapping="/music/**"></mvc:resources>		
+
+	
+</beans>

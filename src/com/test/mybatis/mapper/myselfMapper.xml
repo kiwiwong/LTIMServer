@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.mybatis.mapper.myselfMapper">
+	
+	<select id="getPtpMessage" parameterType="map" resultType="com.test.mybatis.po.Ptphismes" statementType="CALLABLE">
+		SELECT * FROM ptphismes WHERE (sender = #{sender} AND receiver = #{receiver}) OR (sender = #{receiver} AND receiver = #{sender})
+	</select>
+	
+	<select id="getGroupHistoryMessage" parameterType="Integer" resultType="com.test.webpo.groupHistoryMessage" statementType="CALLABLE">
+		SELECT A.userid,A.groupid,B.* FROM usergroup A,ghistorymessage B WHERE 
+			A.groupid = #{groupid} AND 
+			A.usergroupid = B.usergroupid 
+			order by B.stime;
+	</select>
+	
+</mapper>

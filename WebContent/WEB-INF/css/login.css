@@ -1,0 +1,217 @@
+body{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+#app{
+	width: 430px;
+	height: 340px;
+	margin: 0 auto;
+	vertical-align: middle;
+	margin-top: 12%;
+	outline: none;
+	border-radius: 4px;
+	box-shadow: 0px 3px 7px #999,3px 0px 7px #999,0px -3px 7px #999,-3px 0px 7px #999;
+	
+}
+#app .top{
+	color: white;
+	width: 430px;
+	height: 181px;
+	outline: none;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	background:url(../img/logo.png) 130px no-repeat,
+				url(../img/bg-login.png) no-repeat;
+				background-size:50%,auto ;
+}
+#app .toprightico{
+	float: right;
+	margin: 3px;
+	color: #959fd3;
+	border-radius: 4px;
+	transition: color 1s,background 1s;
+}
+#app .toprightico:hover{
+	color: white;
+	cursor: pointer;
+}
+#app .close:hover{
+	display: inline-block;
+	background: red;
+	
+}
+/*下半部分CSS代码*/
+#app .main{
+	margin: 0;
+	padding: 0;
+	width: 430px;
+	height: 159px;
+	outline: none;
+	background: #EBF2F9;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	position: relative;
+}
+
+#app .main .touxiang{
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background: url(../img/ceshi-1.jpg) no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 15px;
+	left: 40px;
+}
+#app .main .status{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: #70ed3a;
+	border-radius: 50%;
+	position: absolute;
+	top: 80px;
+	left:105px;
+}
+#app .main input[type="text"],#app .main input[type = "password"]{
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 190px;
+	border: 1px solid #d1d1d1;
+	outline: none;
+	text-indent: 4px;
+	font-family: "微软雅黑";
+	
+}
+#app .main input:hover{
+	border: 1px solid #1583dd;
+	z-index: 2;
+}
+#app .main #num{
+	position: absolute;
+	height: 29px;
+	top: 15px;
+	left: 130px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+#app .main #pwd{
+	height: 29px;
+	position: absolute;
+	top: 45px;
+	left: 130px;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+#app .main .drop-down{
+	position: absolute;
+	top: 20px;
+	left: 295px;
+	z-index: 3;
+	color: #c3c8cc;
+}
+#app .main .keybord{
+	position: absolute;
+	top: 50px;
+	left: 295px;
+	z-index: 3;
+	color: #c3c8cc;
+}
+#app .main .keybord:hover,#app .main .drop-down:hover{
+	color:#333;
+	cursor: pointer;
+}
+#app .main a{
+	color:#2685e3;	
+	font-size: 13px;
+	text-decoration: none;
+	outline: none;
+}
+#app .main a:hover{
+	color:#61b3f6
+}
+#app .main .register{
+	position: absolute;
+	top: 20px;
+	left: 330px;
+}
+#app .main .findpsw{
+	position: absolute;
+	top: 50px;
+	left: 330px;
+}
+#app .main input[type=checkbox]{
+	margin: 0;
+	display: inline-block;
+}
+#app .main .checkboxs{
+	display: inline-block;
+	width: 192px;
+	height: 20px;
+	position: absolute;
+	top: 80px;
+	left: 130px;
+}
+#app .main .remember{
+	float: left;
+	
+}
+#app .main .autologin{
+	float: right;
+}
+
+#app .main .footer{
+	width: 430px;
+	height: 40px;
+	position: absolute;
+	bottom: 5px;
+}
+
+#app .main .footer .user{
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	margin: 10px 0 0 3px;
+	border-radius: 4px;
+	float: left;
+	transition: background 1s;
+}
+
+#app .main .footer #loginbtn{
+	width: 190px;
+	height: 40px;
+	background: #00A3FF;
+	margin: 0px 0 0 13px;
+	border-radius: 6px;
+	letter-spacing: 3px;
+	color: white;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	border: none;
+	outline: none;
+	transition: background 1s;
+}
+#app .main .footer #loginbtn:hover{
+	background: #3cc3f5;
+	cursor: pointer;
+}
+
+#app .main .footer .two{
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	margin: 10px 3px 0 0;
+	border-radius: 4px;
+	float: right;
+	transition: background 1s;
+}
+
+
+#app .main .footer .user:hover,#app .main .footer .two:hover{
+	background: #D8DFE5;
+	cursor: pointer;
+}
